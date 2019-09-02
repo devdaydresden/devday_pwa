@@ -36,7 +36,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return of(new HttpResponse({ status: 200, body: body }));
                 } else {
                     // else return 400 bad request
-                    return throwError({ error: { message: 'Username or password is incorrect' } });
+                    return throwError({ error: { message: 'Benutzername oder Passwort ist nicht korrekt' } });
                 }
             }
 
@@ -47,7 +47,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return of(new HttpResponse({ status: 200, body: users }));
                 } else {
                     // return 401 not authorised if token is null or invalid
-                    return throwError({ status: 401, error: { message: 'Unauthorised' } });
+                    return throwError({ status: 401, error: { message: 'Nicht authorisiert' } });
                 }
             }
 
@@ -64,7 +64,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return of(new HttpResponse({ status: 200, body: user }));
                 } else {
                     // return 401 not authorised if token is null or invalid
-                    return throwError({ status: 401, error: { message: 'Unauthorised' } });
+                    return throwError({ status: 401, error: { message: 'Nicht authorisiert' } });
                 }
             }
 
@@ -76,7 +76,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 // validation
                 let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length;
                 if (duplicateUser) {
-                    return throwError({ error: { message: 'Username "' + newUser.username + '" is already taken' } });
+                    return throwError({ error: { message: 'Benutzername "' + newUser.username + '" wird bereits benutzt' } });
                 }
 
                 // save new user
@@ -109,7 +109,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return of(new HttpResponse({ status: 200 }));
                 } else {
                     // return 401 not authorised if token is null or invalid
-                    return throwError({ status: 401, error: { message: 'Unauthorised' } });
+                    return throwError({ status: 401, error: { message: 'Nicht authorisiert' } });
                 }
             }
 
