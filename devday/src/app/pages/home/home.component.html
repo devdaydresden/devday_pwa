@@ -1,9 +1,9 @@
-<h1>Hallo {{ currentUser.firstName }}!</h1>
+<h1>Hallo {{ currentUser.email }}!</h1>
 <p>Sie sind eingeloggt</p>
 <h3>Alle registrierten Benutzer:</h3>
 <ul>
   <li *ngFor="let user of users">
-    {{ user.username }} ({{ user.firstName }} {{ user.lastName }}) -
+    {{ user.email }} ({{ user.email }} {{ user.lastName }}) -
     <a (click)="deleteUser(user.id)" class="text-danger">Löschen</a>
   </li>
 </ul>
