@@ -1,0 +1,19 @@
+:host {
+    .form-group {
+        width: 100%;
+        position: relative;
+
+        label {
+            visibility: hidden;
+        }
+
+        input {
+            background: var(--input-dark-background);
+            border: none;
+            padding: 20px;
+            color: var(--white);
+            font-size: 20px;
+            width: 100%;
+        }
+    }
+}
