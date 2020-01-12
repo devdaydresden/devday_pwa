@@ -1,0 +1,42 @@
+:host {
+    margin: 0 12px;
+    padding: 12px 30px;
+
+    border: 0;
+    background: var(--teal);
+
+    color: var(--white);
+
+    font-family: SourceSansPro, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+
+    min-width: 290px;
+    margin-bottom: 12px;
+
+    transition: all 250ms;
+
+    &:hover {
+        background: var(--teal-dark);
+        cursor: pointer;
+    }
+
+    &.centered {
+        display: block;
+
+        margin: 0 auto 12px;
+    }
+
+    &.outline {
+        background: transparent;
+        border: 1px solid var(--teal);
+        color: var(--teal);
+
+        &:hover {
+            background: var(--teal-dark);
+            color: var(--white);
+        }
+    }
+}

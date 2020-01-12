@@ -4,10 +4,16 @@
 
         max-width: 100%;
 
-        margin: 0 12px;
+        margin: 0 12px 12px;
 
         label {
+            display: inline-block;
+
+            width: 0;
+            height: 0;
+
             visibility: hidden;
+            line-height: 0;
         }
 
         input {
@@ -26,7 +32,7 @@
         sup {
             position: absolute;
 
-            top: 32px;
+            top: 15px;
             right: 10px;
             font-size: 27px;
         }
@@ -41,6 +47,7 @@
 
                 left: 12px;
                 top: 50%;
+                transform: translateY(-50%);
             }
         }
     }
