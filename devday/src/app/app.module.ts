@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 import { ComponentsModule } from './modules/components.module';
 import { ExamplesPageComponent } from './pages/examples-page/examples-page.component';
 import { AppRoutingModule } from './routing/app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './routing/app-routing.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ComponentsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })

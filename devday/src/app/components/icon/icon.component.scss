@@ -1,0 +1,12 @@
+:host {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+::ng-deep svg {
+    height: 100%;
+    fill: currentColor;
+    pointer-events: none;
+}
+
