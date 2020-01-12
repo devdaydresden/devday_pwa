@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { InputComponent } from '../components/input/input.component';
 import { IconModule } from '../components/icon/icon.module';
 import { ButtonComponent } from '../components/button/button.component';
+import { TabsComponent } from '../components/tabs/tabs.component';
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent],
+  declarations: [InputComponent, ButtonComponent, TabsComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -14,7 +15,8 @@ import { ButtonComponent } from '../components/button/button.component';
   ],
   exports: [
       InputComponent,
-      ButtonComponent
+      ButtonComponent,
+      TabsComponent
   ]
 })
 export class ComponentsModule { }

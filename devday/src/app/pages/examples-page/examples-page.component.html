@@ -12,3 +12,13 @@
 <button app-button textBtn centered>Example Button</button>
 
 <button app-button textBtn centered outline>Example Outline Button</button>
+
+<tabs [data]="tabExample.data" [activeIndex]="tabExample.activeIndex" (activeIndexChange)="tabChanged($event)"></tabs>
+
+<ng-container *ngIf="tabExample.activeIndex === 0">
+    Tab 1 Content
+</ng-container>
+
+<ng-container *ngIf="tabExample.activeIndex === 1">
+    Tab 2 Content
+</ng-container>

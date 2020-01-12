@@ -1,0 +1,11 @@
+<nav class="tabs" *ngIf="data.length > 0">
+    <ul class="nav nav-tabs">
+        <ng-container *ngFor="let tab of data; let i = index">
+            <li role="presentation" (click)="changeActiveIndex(i, $event);" class="nav-item" [class.active]="i === activeIndex" tabindex="0">
+                <span class="nav-link" tabindex="-1" role="tab" data-toggle="tab" aria-expanded="true">
+                  <span class="nav-link-text">{{ tab.text }}</span>
+                </span>
+            </li>
+        </ng-container>
+    </ul>
+</nav>
