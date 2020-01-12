@@ -1,0 +1,13 @@
+<nav class="cards" *ngIf="data.length > 0">
+    <ul class="nav nav-cards" [class.twoItemRow]="twoItems" [class.dark]="dark">
+        <ng-container *ngFor="let card of data; let i = index">
+            <li role="presentation" class="nav-item" tabindex="0">
+                <a [routerLink]="[card.link]">
+                    <i app-icon iconSrc="{{card.icon}}" size="CardIcon" class="icon"></i>
+                    <span>{{card.text}}</span>
+                </a>
+
+            </li>
+        </ng-container>
+    </ul>
+</nav>

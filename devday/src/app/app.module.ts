@@ -8,6 +8,7 @@ import { ComponentsModule } from './modules/components.module';
 import { ExamplesPageComponent } from './pages/examples-page/examples-page.component';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    RouterModule,
     ComponentsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],

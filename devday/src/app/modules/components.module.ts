@@ -5,18 +5,22 @@ import { InputComponent } from '../components/input/input.component';
 import { IconModule } from '../components/icon/icon.module';
 import { ButtonComponent } from '../components/button/button.component';
 import { TabsComponent } from '../components/tabs/tabs.component';
+import { CardsComponent } from '../components/cards/cards.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent, TabsComponent],
+  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent],
   imports: [
     CommonModule,
     FormsModule,
-    IconModule
+    IconModule,
+    RouterModule
   ],
   exports: [
       InputComponent,
       ButtonComponent,
-      TabsComponent
+      TabsComponent,
+      CardsComponent
   ]
 })
 export class ComponentsModule { }
