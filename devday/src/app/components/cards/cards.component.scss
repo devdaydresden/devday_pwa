@@ -22,6 +22,17 @@ $item-margin : 8px;
             .nav-item {
                 flex: 1 0 50% !important;
                 max-width: calc(100% / 2 - (#{$item-margin} * 2)) !important;
+
+                a {
+                    padding: 20px;
+                    text-size: 20px;
+                    font-weight: bold;
+                    min-height: 156px;
+
+                    i {
+                        margin-bottom: 18px;
+                    }
+                }
             }
         }
 

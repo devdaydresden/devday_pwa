@@ -3,7 +3,7 @@
         <ng-container *ngFor="let card of data; let i = index">
             <li role="presentation" class="nav-item" tabindex="0">
                 <a [routerLink]="[card.link]">
-                    <i app-icon iconSrc="{{card.icon}}" size="CardIcon" class="icon"></i>
+                    <i app-icon iconSrc="{{card.icon}}" [size]="twoItems ? 'Large' : 'CardIcon'" class="icon"></i>
                     <span>{{card.text}}</span>
                 </a>
 
