@@ -23,7 +23,7 @@ export class IconComponent implements OnInit {
     if (this.isMegaIcon) {
       return this.sanitizer.bypassSecurityTrustStyle(`height: 40px; width: ${this.iconSize}px; line-height: ${this.iconSize}px`)
     } else {
-      return this.sanitizer.bypassSecurityTrustStyle(`height: ${this.iconSize}px; width: ${this.iconSize}px; line-height: ${this.iconSize}px`)
+      return this.sanitizer.bypassSecurityTrustStyle(`width: ${this.iconSize}px; line-height: ${this.iconSize}px`)
     }
   }
 

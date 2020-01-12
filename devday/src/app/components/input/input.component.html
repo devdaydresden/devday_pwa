@@ -3,6 +3,7 @@
   [class.mandatory]="mandatory"
   [class.readonly]="readonly"
   [class.error]="error"
+  [class.hasIcon]="icon ? true : false"
   [ngClass]="formGroupClasses">
     <label
       *ngIf="label"
@@ -23,8 +24,7 @@
       [attr.pattern]="pattern"
       [disabled]="disabled"
       [readonly]="readonly">
-    <i *ngIf="error" class="icon form-icon-position" icon iconSrc="icon-alert-warning"></i>
-    <i *ngIf="mandatory && !error " class="icon form-icon-position" icon iconSrc="icon-mandatory-form-mark" size="Small"></i>
-    <i *ngIf="disabled || readonly" class="icon form-icon-position icon-lead-locked" icon iconSrc="icon-lead-locked"></i>
+    <i *ngIf="icon" app-icon iconSrc="{{icon}}" size="Medium" class="icon"></i>
+    <sup *ngIf="mandatory">*</sup>
     <span class="error-block" *ngIf="error">{{errorMessage}}</span>
 </div>

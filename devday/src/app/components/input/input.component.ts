@@ -15,7 +15,7 @@ export class InputComponent {
     @Input() readonly : boolean = null;
     @Input() value : string = '';
     @Input() name : string = '';
-    @Input() icon : string = '';
+    @Input() icon : string = null;
     @Input() placeholder : string = '';
     @Input() mandatory : boolean = false;
     @Input() error : boolean = false;

@@ -1,19 +1,47 @@
 :host {
     .form-group {
-        width: 100%;
         position: relative;
+
+        max-width: 100%;
+
+        margin: 0 12px;
 
         label {
             visibility: hidden;
         }
 
         input {
-            background: var(--input-dark-background);
-            border: none;
-            padding: 20px;
-            color: var(--white);
-            font-size: 20px;
             width: 100%;
+
+            padding: 12px 30px 12px 12px;
+
+            border: none;
+            background: var(--input-dark-background);
+
+            color: var(--white);
+
+            font-size: 20px;
+        }
+
+        sup {
+            position: absolute;
+
+            top: 32px;
+            right: 10px;
+            font-size: 27px;
+        }
+
+        &.hasIcon {
+            input {
+                padding-left: 38px;
+            }
+
+            .icon {
+                position: absolute;
+
+                left: 12px;
+                top: 50%;
+            }
         }
     }
 }
