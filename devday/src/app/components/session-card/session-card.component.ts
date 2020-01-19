@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { SessionCard } from 'src/app/classes/session-card';
 import { Helper } from 'src/app/shared/helper/helper';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-session-card',
@@ -18,7 +19,7 @@ export class SessionCardComponent implements OnInit {
     "title" : "Testsession",
     "speaker" : "Max Mustermann",
     "type" : "session",
-    "isFavourite": false,
+    "isFavourite": true,
     "location": "Gartensaal",
   };
 
@@ -26,7 +27,7 @@ export class SessionCardComponent implements OnInit {
   get fullWidth() {return this._fullWidth}
   set fullWidth (value: any) { this._fullWidth = Helper.setBoolean(value)};
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
     switch (this.sessionData.type) {
@@ -38,6 +39,17 @@ export class SessionCardComponent implements OnInit {
           break;
       default:
         break;
+    }
+  }
+
+  updateFavorit(event) {
+    // TODO: Handle the update here within favouritService which needs to be created
+    console.log(this.sessionData.sessionId, event)
+  }
+
+  showSession() {
+    if (this.sessionData.linkToSession) {
+      this.router.navigate(['/session/' + this.sessionData.sessionId])
     }
   }
 

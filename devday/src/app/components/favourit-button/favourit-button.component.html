@@ -1,1 +1,4 @@
-<p>favourit-button works!</p>
+<button class="favourit-button" (click)="updateValue()">
+    <i *ngIf="!isFavourit" app-icon iconSrc="ic_favourit_outline" size="Medium" class="icon"></i>
+    <i *ngIf="isFavourit" app-icon iconSrc="ic_favourit" size="Medium" class="icon"></i>
+</button>

@@ -1,17 +1,13 @@
 <div class="session-card" [ngClass]="cardType" [class.full-width]="fullWidth">
-    <ng-container *ngIf="!sessionData.linkToSession">
-        <ng-container *ngTemplateOutlet="cardContent"></ng-container>
-    </ng-container>
-
-    <a *ngIf="sessionData.linkToSession" [routerLink]="['/session/'+sessionData.sessionId]">
-        <ng-container *ngTemplateOutlet="cardContent"></ng-container>
-    </a>
+    <ng-container *ngTemplateOutlet="cardContent"></ng-container>
 
 </div>
 
 <ng-template #cardContent>
-    <h3 class="session-location">{{ sessionData.location }}</h3>
-    <h2 class="session-title">{{ sessionData.title }}</h2>
+    <div class="session-data" (click)="showSession()">
+        <h3 class="session-location">{{ sessionData.location }}</h3>
+        <h2 class="session-title">{{ sessionData.title }}</h2>
+    </div>
     <span class="session-detail-wrapper">
         <span class="speaker">
             <i app-icon iconSrc="ic_person" size="Small" class="icon"></i>
@@ -19,7 +15,7 @@
         </span>
         <span class="spacer"></span>
         <span *ngIf="sessionData.favourite">
-            <app-favourit-button></app-favourit-button>
+            <app-favourit-button [isFavourit]="sessionData.isFavourite" (change)="updateFavorit($event)"></app-favourit-button>
         </span>
     </span>
 </ng-template>
