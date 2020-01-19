@@ -1,0 +1,27 @@
+<div class="form-group"
+  [class.inactive]="disabled"
+  [class.mandatory]="mandatory"
+  [class.readonly]="readonly"
+  [class.error]="error"
+  [ngClass]="formGroupClasses">
+    <label
+      *ngIf="label"
+      for="{{ident}}"
+      [class.inactive]="disabled">
+      {{label}}
+      <sup *ngIf="mandatory">*</sup>
+    </label>
+    <textarea
+      class="form-control"
+      id="{{ident}}"
+      placeholder="{{placeholder}}"
+      [(ngModel)]="value"
+      (change)="handleValueChanged($event)"
+      (keyup)="handleValidation()"
+      [attr.name]="name"
+      [attr.pattern]="pattern"
+      [disabled]="disabled"
+      [readonly]="readonly"></textarea>
+    <sup *ngIf="mandatory">*</sup>
+    <span class="error-block" *ngIf="error">{{errorMessage}}</span>
+</div>
