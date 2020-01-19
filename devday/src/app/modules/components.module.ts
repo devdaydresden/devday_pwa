@@ -12,6 +12,7 @@ import { FavouritButtonComponent } from '../components/favourit-button/favourit-
 import { SessionGridComponent } from '../components/session-grid/session-grid.component';
 import { TextareaComponent } from '../components/textarea/textarea.component';
 import { IconLinkComponent } from '../components/icon-link/icon-link.component';
+import { NotificationComponent } from '../components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { IconLinkComponent } from '../components/icon-link/icon-link.component';
     FavouritButtonComponent,
     SessionGridComponent,
     TextareaComponent,
-    IconLinkComponent
+    IconLinkComponent,
+    NotificationComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { IconLinkComponent } from '../components/icon-link/icon-link.component';
       SessionCardComponent,
       SessionGridComponent,
       TextareaComponent,
-      IconLinkComponent
+      IconLinkComponent,
+      NotificationComponent
   ]
 })
 export class ComponentsModule { }
