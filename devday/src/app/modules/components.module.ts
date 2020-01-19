@@ -8,9 +8,10 @@ import { TabsComponent } from '../components/tabs/tabs.component';
 import { CardsComponent } from '../components/cards/cards.component';
 import { RouterModule } from '@angular/router';
 import { SessionCardComponent } from '../components/session-card/session-card.component';
+import { FavouritButtonComponent } from '../components/favourit-button/favourit-button.component';
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent, SessionCardComponent],
+  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent, SessionCardComponent, FavouritButtonComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -21,7 +22,9 @@ import { SessionCardComponent } from '../components/session-card/session-card.co
       InputComponent,
       ButtonComponent,
       TabsComponent,
-      CardsComponent
+      CardsComponent,
+      FavouritButtonComponent,
+      SessionCardComponent
   ]
 })
 export class ComponentsModule { }
