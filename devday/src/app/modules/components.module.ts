@@ -7,9 +7,10 @@ import { ButtonComponent } from '../components/button/button.component';
 import { TabsComponent } from '../components/tabs/tabs.component';
 import { CardsComponent } from '../components/cards/cards.component';
 import { RouterModule } from '@angular/router';
+import { SessionCardComponent } from '../components/session-card/session-card.component';
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent],
+  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent, SessionCardComponent],
   imports: [
     CommonModule,
     FormsModule,
