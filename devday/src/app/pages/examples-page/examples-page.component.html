@@ -27,4 +27,9 @@
 
 <app-cards [data]="cards" twoItems></app-cards>
 
-<app-session-card></app-session-card>
+<app-session-card [sessionData]="sessionCard"></app-session-card>
+
+<h2>Sessiongrid</h2>
+
+<app-session-grid [timeSlot]="sessionSlotsExample" [listView]="true"></app-session-grid>
+<app-session-grid [timeSlot]="sessionSlotsExample" ></app-session-grid>

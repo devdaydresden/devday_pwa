@@ -1,4 +1,4 @@
-<div class="session-card" [ngClass]="cardType" [class.full-width]="fullWidth">
+<div class="session-card" *ngIf="sessionData" [ngClass]="cardType" [class.full-width]="fullWidth">
     <ng-container *ngTemplateOutlet="cardContent"></ng-container>
 
 </div>

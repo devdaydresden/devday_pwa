@@ -1,0 +1,52 @@
+.session-grid {
+    width: 100%;
+
+    .slot-time {
+        color: var(--dark-font);
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    &.scroll-view {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .slot-time {
+            height: 20px;
+            text-align: center;
+            transform: rotate(270deg) translateX(-50%);
+        }
+
+        .scroll-wrapper {
+            width: calc(100% - 100px);
+            overflow-y: hidden;
+            height: 110px;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+
+                overflow-x: scroll;
+                padding-bottom: 17px;
+                overflow-y: hidden;
+
+                li {
+                    width: auto;
+                    margin-right: 12px;
+                }
+            }
+
+        }
+    }
+
+    &.list-view {
+
+    }
+
+}

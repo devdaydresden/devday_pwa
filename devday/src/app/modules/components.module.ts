@@ -9,9 +9,10 @@ import { CardsComponent } from '../components/cards/cards.component';
 import { RouterModule } from '@angular/router';
 import { SessionCardComponent } from '../components/session-card/session-card.component';
 import { FavouritButtonComponent } from '../components/favourit-button/favourit-button.component';
+import { SessionGridComponent } from '../components/session-grid/session-grid.component';
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent, SessionCardComponent, FavouritButtonComponent],
+  declarations: [InputComponent, ButtonComponent, TabsComponent, CardsComponent, SessionCardComponent, FavouritButtonComponent, SessionGridComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -24,7 +25,8 @@ import { FavouritButtonComponent } from '../components/favourit-button/favourit-
       TabsComponent,
       CardsComponent,
       FavouritButtonComponent,
-      SessionCardComponent
+      SessionCardComponent,
+      SessionGridComponent
   ]
 })
 export class ComponentsModule { }

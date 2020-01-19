@@ -12,16 +12,7 @@ export class SessionCardComponent implements OnInit {
   private _fullWidth : boolean = false;
   public cardType : string = 'type-session';
 
-  @Input() sessionData : SessionCard = {
-    "sessionId" : "123456",
-    "favourite" : true,
-    "linkToSession" : true,
-    "title" : "Testsession",
-    "speaker" : "Max Mustermann",
-    "type" : "session",
-    "isFavourite": true,
-    "location": "Gartensaal",
-  };
+  @Input() sessionData : SessionCard;
 
   @Input()
   get fullWidth() {return this._fullWidth}
@@ -30,16 +21,19 @@ export class SessionCardComponent implements OnInit {
   constructor(private router : Router) { }
 
   ngOnInit() {
-    switch (this.sessionData.type) {
-      case 'break':
-        this.cardType = 'type-break'
-        break;
-      case 'lightning':
-          this.cardType = 'type-lightning'
+    if (this.sessionData) {
+      switch (this.sessionData.type) {
+        case 'break':
+          this.cardType = 'type-break'
           break;
-      default:
-        break;
+        case 'lightning':
+            this.cardType = 'type-lightning'
+            break;
+        default:
+          break;
+      }
     }
+
   }
 
   updateFavorit(event) {
