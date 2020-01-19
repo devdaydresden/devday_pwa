@@ -1,0 +1,21 @@
+:host {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-font);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-size: 12px;
+    align-items: center;
+
+    i {
+        margin-bottom: 8px;
+    }
+
+    .text {
+        text-transform: uppercase;
+    }
+}

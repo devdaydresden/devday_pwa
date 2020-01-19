@@ -9,11 +9,13 @@
 
 <app-input label="Example Input" icon="ic_password" type="password" placeholder="Example Password"></app-input>
 
-<app-textarea label="Example Textarea" placeholder="Comment"></app-textarea>
+<div class="white">
+    <app-textarea label="Example Textarea" placeholder="Comment"></app-textarea>
 
-<button app-button textBtn centered>Example Button</button>
+    <button app-button textBtn centered>Example Button</button>
 
-<button app-button textBtn centered outline>Example Outline Button</button>
+    <button app-button textBtn centered outline>Example Outline Button</button>
+</div>
 
 <tabs [data]="tabExample.data" [activeIndex]="tabExample.activeIndex" (activeIndexChange)="tabChanged($event)"></tabs>
 
@@ -27,11 +29,16 @@
 
 <app-cards [data]="cards" dark></app-cards>
 
-<app-cards [data]="cards" twoItems></app-cards>
+<div class="white">
 
-<app-session-card [sessionData]="sessionCard"></app-session-card>
+    <app-cards [data]="cards" twoItems></app-cards>
 
-<h2>Sessiongrid</h2>
+    <app-session-card [sessionData]="sessionCard"></app-session-card>
 
-<app-session-grid [timeSlot]="sessionSlotsExample" [listView]="true"></app-session-grid>
-<app-session-grid [timeSlot]="sessionSlotsExample" ></app-session-grid>
+    <h2>Sessiongrid</h2>
+
+    <app-session-grid [timeSlot]="sessionSlotsExample" [listView]="true"></app-session-grid>
+    <app-session-grid [timeSlot]="sessionSlotsExample" ></app-session-grid>
+
+    <app-icon-link icon="ic_profile" linkTo="/profile" text="Profile"></app-icon-link>
+</div>

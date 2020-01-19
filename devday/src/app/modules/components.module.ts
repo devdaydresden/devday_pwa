@@ -11,6 +11,7 @@ import { SessionCardComponent } from '../components/session-card/session-card.co
 import { FavouritButtonComponent } from '../components/favourit-button/favourit-button.component';
 import { SessionGridComponent } from '../components/session-grid/session-grid.component';
 import { TextareaComponent } from '../components/textarea/textarea.component';
+import { IconLinkComponent } from '../components/icon-link/icon-link.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TextareaComponent } from '../components/textarea/textarea.component';
     SessionCardComponent,
     FavouritButtonComponent,
     SessionGridComponent,
-    TextareaComponent
+    TextareaComponent,
+    IconLinkComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { TextareaComponent } from '../components/textarea/textarea.component';
       FavouritButtonComponent,
       SessionCardComponent,
       SessionGridComponent,
-      TextareaComponent
+      TextareaComponent,
+      IconLinkComponent
   ]
 })
 export class ComponentsModule { }

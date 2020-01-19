@@ -1,0 +1,12 @@
+.white {
+    background: white;
+    width: calc(100% + 48px);
+    margin: 0 -24px;
+    padding: 24px;
+    color: var(--dark-font);
+
+    h1,
+    h2 {
+        color: var(--dark-font)
+    }
+}
