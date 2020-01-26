@@ -13,6 +13,7 @@ import { SessionGridComponent } from '../components/session-grid/session-grid.co
 import { TextareaComponent } from '../components/textarea/textarea.component';
 import { IconLinkComponent } from '../components/icon-link/icon-link.component';
 import { NotificationComponent } from '../components/notification/notification.component';
+import { SpeakerAccordionComponent } from '../components/speaker-accordion/speaker-accordion.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NotificationComponent } from '../components/notification/notification.c
     SessionGridComponent,
     TextareaComponent,
     IconLinkComponent,
-    NotificationComponent
+    NotificationComponent,
+    SpeakerAccordionComponent
   ],
   imports: [
     CommonModule,
@@ -43,7 +45,8 @@ import { NotificationComponent } from '../components/notification/notification.c
       SessionGridComponent,
       TextareaComponent,
       IconLinkComponent,
-      NotificationComponent
+      NotificationComponent,
+      SpeakerAccordionComponent
   ]
 })
 export class ComponentsModule { }
