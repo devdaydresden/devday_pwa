@@ -1,5 +1,7 @@
 <div class="session-grid" *ngIf="timeSlot" [class.list-view]="listView" [class.scroll-view]="!listView">
-    <h1 class="slot-time">{{ timeSlot.slot }} </h1>
+    <div class="slot-time-wrapper">
+        <h1 class="slot-time">{{ timeSlot.slot }} </h1>
+    </div>
     <div class="scroll-wrapper">
         <ul>
             <ng-container *ngFor="let session of timeSlot.items; let i = index">

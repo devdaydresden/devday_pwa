@@ -1,43 +1,71 @@
 .session-grid {
     width: 100%;
 
-    .slot-time {
-        color: var(--dark-font);
-        font-family: Source Sans Pro;
-        font-size: 18px;
-        line-height: 20px;
-        margin-bottom: 8px;
+    .slot-time-wrapper {
+        overflow: hidden;
+
+        .slot-time {
+            color: var(--dark-font);
+
+            font-family: Source Sans Pro;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 550;
+        }
     }
 
     &.scroll-view {
-        width: 100%;
-        overflow: hidden;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
+        width: 100%;
+
+        overflow: hidden;
+
+        .slot-time-wrapper {
+            width: 40px;
+
+            overflow: hidden;
+
+            .slot-time {
+                width: 100px;
+                height: 20px;
+
+                color: var(--dark-font);
+
+                text-align: center;
+                transform: rotate(270deg) translateX(-50%);
+                margin-left: -32px;
+                margin-top: -6px;
+            }
+        }
+
         .slot-time {
             height: 20px;
+
             text-align: center;
             transform: rotate(270deg) translateX(-50%);
         }
 
         .scroll-wrapper {
             width: calc(100% - 100px);
-            overflow-y: hidden;
             height: 110px;
+
+            overflow-y: hidden;
 
             ul {
                 display: flex;
                 flex-direction: row;
-                list-style: none;
 
+                list-style: none;
                 overflow-x: scroll;
                 padding-bottom: 17px;
                 overflow-y: hidden;
 
                 li {
                     width: auto;
+
                     margin-right: 12px;
                 }
             }
@@ -45,8 +73,6 @@
         }
     }
 
-    &.list-view {
 
-    }
 
 }
