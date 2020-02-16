@@ -1,0 +1,5 @@
+<div class="button-switch">
+    <ng-container *ngFor="let item of items">
+        <button type="button" [class.active]="item.selected" (click)="setActive(item.value)"><i app-icon *ngIf="item.icon" iconSrc="{{item.icon}}" size="Small" class="icon"></i>{{item.text}}</button>
+    </ng-container>
+</div>

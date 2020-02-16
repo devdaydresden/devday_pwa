@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Card } from 'src/app/classes/card';
 import { TimeSlot } from 'src/app/classes/time-slot';
 import { SessionCard } from 'src/app/classes/session-card';
+import { ButtonSwitchItem } from 'src/app/classes/button-switch';
 
 @Component({
   selector: 'app-examples-page',
@@ -94,6 +95,21 @@ export class ExamplesPageComponent implements OnInit {
     ]
   }
 
+  public sessionsAsList :boolean = true;
+
+  public buttonSwitchItems : ButtonSwitchItem[] = [
+    {
+      value: 'abreast',
+      text: 'Abreast',
+      selected: true
+    },
+    {
+      value: 'among',
+      text: 'Among',
+      selected: false
+    }
+  ]
+
   constructor() { }
 
   ngOnInit() {
@@ -106,4 +122,12 @@ export class ExamplesPageComponent implements OnInit {
     this.tabExample.activeIndex = tabIndex;
   }
 
+  sortChange(event) {
+    console.log(event)
+    if (event === 'abreast') {
+      this.sessionsAsList = true;
+    } else if (event === 'among') {
+      this.sessionsAsList = false;
+    }
+  }
 }

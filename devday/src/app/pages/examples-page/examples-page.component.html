@@ -36,9 +36,8 @@
     <app-session-card [sessionData]="sessionCard"></app-session-card>
 
     <h2>Sessiongrid</h2>
-
-    <app-session-grid [timeSlot]="sessionSlotsExample" [listView]="true"></app-session-grid>
-    <app-session-grid [timeSlot]="sessionSlotsExample" ></app-session-grid>
+    <app-button-switch [items]="buttonSwitchItems" (change)="sortChange($event)"></app-button-switch>
+    <app-session-grid [timeSlot]="sessionSlotsExample" [listView]="sessionsAsList"></app-session-grid>
 
     <app-icon-link icon="ic_profile" linkTo="/profile" text="Profile"></app-icon-link>
     <app-notification icon="ic_notification" text="Lorem Ipsum Dolor semet"></app-notification>

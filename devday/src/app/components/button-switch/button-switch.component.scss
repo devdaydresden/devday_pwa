@@ -1,0 +1,29 @@
+.button-switch {
+    border: 2px solid var(--dark-blue);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+
+
+    button {
+        border: 1px solid var(--white);
+        padding: 11px;
+        background: transparent;
+        color: var(--dark-blue);
+        transition: all 150ms;
+        flex: 1;
+        font-family: 'Source Sans Pro';
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+
+        &.active {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+
+        i {
+            margin-right: 4px;
+        }
+    }
+}

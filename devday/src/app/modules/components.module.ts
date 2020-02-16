@@ -14,6 +14,7 @@ import { TextareaComponent } from '../components/textarea/textarea.component';
 import { IconLinkComponent } from '../components/icon-link/icon-link.component';
 import { NotificationComponent } from '../components/notification/notification.component';
 import { SpeakerAccordionComponent } from '../components/speaker-accordion/speaker-accordion.component';
+import { ButtonSwitchComponent } from '../components/button-switch/button-switch.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SpeakerAccordionComponent } from '../components/speaker-accordion/speak
     TextareaComponent,
     IconLinkComponent,
     NotificationComponent,
-    SpeakerAccordionComponent
+    SpeakerAccordionComponent,
+    ButtonSwitchComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +48,8 @@ import { SpeakerAccordionComponent } from '../components/speaker-accordion/speak
       TextareaComponent,
       IconLinkComponent,
       NotificationComponent,
-      SpeakerAccordionComponent
+      SpeakerAccordionComponent,
+      ButtonSwitchComponent
   ]
 })
 export class ComponentsModule { }
