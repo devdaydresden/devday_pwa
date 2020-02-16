@@ -1,1 +1,24 @@
-<p>speaker-accordion works!</p>
+<div class="speaker-accordion">
+    <div class="basic-header" (click)="toggleOpenState()">
+        <div class="image-wrapper">
+            <img src="https://via.placeholder.com/150" alt="">
+        </div>
+        <div class="speaker-info">
+            <h1>Speaker Name</h1>
+            <span>speaker contact</span>
+        </div>
+        <div class="icon">
+            <i app-icon iconSrc="ic_arrow_down" size="Small" class="arrow-icon" [class.open]="open"></i>
+        </div>
+    </div>
+    <div class="content" *ngIf="open">
+        <div class="speaker-description">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </div>
+        <div class="sessions">
+            <ng-container *ngFor="let slot of sessionsList">
+                <app-session-grid [sessionOnly]="true" [timeSlot]="slot" [listView]="true"></app-session-grid>
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@
         <ul>
             <ng-container *ngFor="let session of timeSlot.items; let i = index">
                 <li>
-                    <app-session-card [sessionData]="session" [fullWidth]="listView"></app-session-card>
+                    <app-session-card [sessionOnly]="sessionOnly" [sessionData]="session" [fullWidth]="listView"></app-session-card>
                 </li>
             </ng-container>
         </ul>

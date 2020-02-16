@@ -1,4 +1,4 @@
-<div class="session-card" *ngIf="sessionData" [ngClass]="cardType" [class.full-width]="fullWidth">
+<div class="session-card" *ngIf="sessionData" [ngClass]="cardType" [class.sessionOnly]="sessionOnly" [class.full-width]="fullWidth">
     <ng-container *ngTemplateOutlet="cardContent"></ng-container>
 
 </div>
@@ -9,12 +9,12 @@
         <h2 class="session-title">{{ sessionData.title }}</h2>
     </div>
     <span class="session-detail-wrapper">
-        <span class="speaker">
+        <span class="speaker" *ngIf="!sessionOnly">
             <i app-icon iconSrc="ic_person" size="Small" class="icon"></i>
             {{ sessionData.speaker }}
         </span>
         <span class="spacer"></span>
-        <span *ngIf="sessionData.favourite">
+        <span *ngIf="sessionData.favourite && !sessionOnly">
             <app-favourit-button [isFavourit]="sessionData.isFavourite" (change)="updateFavorit($event)"></app-favourit-button>
         </span>
     </span>

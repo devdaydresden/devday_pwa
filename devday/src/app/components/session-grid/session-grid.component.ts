@@ -10,6 +10,7 @@ export class SessionGridComponent implements OnInit {
 
   @Input() timeSlot : TimeSlot;
   @Input() listView : boolean = false;
+  @Input() sessionOnly : boolean = false;
 
   constructor() { }
 

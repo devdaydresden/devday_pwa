@@ -13,6 +13,7 @@ export class SessionCardComponent implements OnInit {
   public cardType : string = 'type-session';
 
   @Input() sessionData : SessionCard;
+  @Input() sessionOnly : boolean = false;
 
   @Input()
   get fullWidth() {return this._fullWidth}

@@ -19,6 +19,7 @@ export class TextareaComponent implements OnInit {
   @Input() mandatory : boolean = false;
   @Input() error : boolean = false;
   @Input() errorMessage : string;
+  @Input() pattern : string;
   @Input() formGroupClasses : string[];
   @Output() change: EventEmitter<FormEventObject> = new EventEmitter<FormEventObject>();
   @Output() valueChange = new EventEmitter<string>();
