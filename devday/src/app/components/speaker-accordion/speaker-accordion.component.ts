@@ -9,7 +9,8 @@ import { TimeSlot } from 'src/app/classes/time-slot';
 export class SpeakerAccordionComponent implements OnInit {
   public open : boolean = false;
 
-  @Input() sessionsList : TimeSlot[] = [{
+  @Input() speakerID : string;
+  public sessionsList : TimeSlot[] = [{
     "slot" : "14:30 - 15:30",
     "items": [
       {
@@ -63,6 +64,16 @@ export class SpeakerAccordionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.getSpeakerInfo()
+  }
+
+  getSpeakerInfo() {
+    // TODO: get Speaker Info from service
+
+  }
+
+  getSpeakerSessions() {
+    // TODO: get speaker Sessions by data from speaker info call
   }
 
   toggleOpenState() {
