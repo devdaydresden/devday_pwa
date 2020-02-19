@@ -10,7 +10,8 @@ import { AppRoutingModule } from './routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { RatingModule } from 'ng-starrating';
+import { StarRatingModule } from 'angular-star-rating';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { RatingModule } from 'ng-starrating';
     AppRoutingModule,
     RouterModule,
     OverlayModule,
-    RatingModule,
+    StarRatingModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [
