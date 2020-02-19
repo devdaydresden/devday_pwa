@@ -9,6 +9,8 @@ import { ExamplesPageComponent } from './pages/examples-page/examples-page.compo
 import { AppRoutingModule } from './routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ComponentsModule,
     AppRoutingModule,
     RouterModule,
-    ComponentsModule,
+    OverlayModule,
+    RatingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [

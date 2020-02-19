@@ -12,7 +12,12 @@
 <div class="white">
     <app-textarea label="Example Textarea" placeholder="Comment"></app-textarea>
 
-    <button app-button textBtn centered>Example Button</button>
+    <button app-button textBtn centered [overlayTriggerFor]="voteOverlay">Example Opening Modal</button>
+
+    <app-overlay #voteOverlay="appOverlay" title="Vote Session" class="overlay">
+      <app-textarea label="Example Textarea" placeholder="Comment"></app-textarea>
+
+    </app-overlay>
 
     <button app-button textBtn centered outline>Example Outline Button</button>
 </div>

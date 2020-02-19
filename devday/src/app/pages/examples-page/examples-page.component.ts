@@ -130,4 +130,8 @@ export class ExamplesPageComponent implements OnInit {
       this.sessionsAsList = false;
     }
   }
+
+  onRate($event:{oldValue:number, newValue:number}) {
+    console.log($event)
+  }
 }

@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'reset.scss';
+@import 'app/global/overlay.scss';
 
 /* You can add global styles to this file, and also import other style files */
 body,
@@ -10,4 +11,9 @@ html {
     color: var(--white);
     font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
     padding: 12px;
+    position: relative;
+
+    &.open {
+      overflow: hidden;
+    }
 }

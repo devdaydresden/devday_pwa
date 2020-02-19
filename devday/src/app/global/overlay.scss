@@ -1,0 +1,43 @@
+.cdk-overlay-container {
+
+  .cdk-overlay-backdrop {
+      position: absolute;
+
+      width: 100vw;
+      height: 100vh;
+
+      transition: background 500ms;
+
+      &.cdk-overlay-backdrop-showing {
+          background: var(--overlay-backdrop-color);
+      }
+  }
+
+  > div {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    top: -12px;
+    left: -12px;
+  }
+
+  .cdk-overlay-pane {
+    position: relative;
+
+    width: auto !important;
+    max-width: 80%;
+    max-height: 100vh;
+
+    margin: 0 auto 0;
+
+    background: var(--white);
+
+    color: var(--dark-font);
+
+    z-index: 6;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

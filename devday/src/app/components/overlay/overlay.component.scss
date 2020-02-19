@@ -1,0 +1,45 @@
+$header-height: 80px;
+
+::ng-deep {
+  .cdk-overlay-pane {
+    max-height: 100vh;
+  }
+
+  .overlay-header {
+    position: relative;
+
+    height: $header-height;
+
+    .title {
+      display: inline-block;
+
+      width: 100%;
+
+      padding: 0 46px;
+
+      color: var(--dark-font);
+
+      margin-top: 25px;
+      text-align: center;
+      font-family: 'Source Sans Pro';
+      font-size: 24px;
+    }
+
+    .close-overlay {
+      position: absolute;
+
+      right: 8px;
+      top: 20px;
+    }
+  }
+
+  .scrollbar-inner {
+    height: auto;
+    max-height: calc(100vh - $header-height);
+
+    padding: 8px;
+
+    overflow: scroll;
+  }
+
+}
