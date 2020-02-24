@@ -29,6 +29,10 @@
             font-size: 20px;
         }
 
+        ::placeholder {
+          color: var(--white);
+        }
+
         sup {
             position: absolute;
 

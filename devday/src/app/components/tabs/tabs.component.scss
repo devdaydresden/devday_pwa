@@ -16,6 +16,8 @@
             transition: all 250ms;
             border-bottom: 2px solid transparent;
 
+            flex: 1;
+
             &.active {
                 border-color: var(--teal);
             }

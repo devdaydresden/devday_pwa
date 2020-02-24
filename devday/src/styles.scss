@@ -1,20 +1,32 @@
 @import 'variables.scss';
+
 @import 'reset.scss';
+
 @import 'app/global/overlay.scss';
+
 @import '~css-star-rating/css/star-rating.css';
 
 /* You can add global styles to this file, and also import other style files */
-body,
 html {
+    min-height: 100vh;
+
     background: var(--background-gradient);
-    margin: 0;
-    padding: 0;
-    color: var(--white);
-    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
-    padding: 12px;
+}
+
+body {
     position: relative;
 
-    &.open {
-      overflow: hidden;
-    }
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    padding: 12px;
+
+    color: var(--white);
+
+    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+
+  &.open {
+    overflow: hidden;
+  }
 }

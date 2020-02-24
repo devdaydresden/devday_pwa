@@ -18,6 +18,7 @@ import { ButtonSwitchComponent } from '../components/button-switch/button-switch
 import { OverlayComponent } from '../components/overlay/overlay.component';
 import { OverlayTriggerDirective } from '../shared/directives/overlay-trigger.directive';
 import { OverlayService } from '../services/overlay.service';
+import { HeaderComponent } from '../components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { OverlayService } from '../services/overlay.service';
     SpeakerAccordionComponent,
     ButtonSwitchComponent,
     OverlayTriggerDirective,
-    OverlayComponent
+    OverlayComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -56,7 +58,8 @@ import { OverlayService } from '../services/overlay.service';
       SpeakerAccordionComponent,
       ButtonSwitchComponent,
       OverlayComponent,
-      OverlayTriggerDirective
+      OverlayTriggerDirective,
+      HeaderComponent
   ],
   providers: [
     OverlayService
