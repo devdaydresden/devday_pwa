@@ -10,7 +10,6 @@ import { AppRoutingModule } from './routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { StarRatingModule } from 'angular-star-rating';
 import { LoginComponent } from './pages/login/login/login.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { SessiongridComponent } from './pages/sessiongrid/sessiongrid/sessiongrid.component';
@@ -39,7 +38,6 @@ import { SpeakerComponent } from './pages/speaker/speaker/speaker.component';
     AppRoutingModule,
     RouterModule,
     OverlayModule,
-    StarRatingModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [

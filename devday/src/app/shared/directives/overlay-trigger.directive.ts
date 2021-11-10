@@ -1,7 +1,7 @@
-import { Directive, OnDestroy, Input, ViewContainerRef, OnInit, isDevMode } from '@angular/core';
-import { OverlayRef, Overlay, ConnectionPositionPair, OverlayConfig, GlobalPositionStrategy, ConnectedOverlayPositionChange, ConnectedPositionStrategy } from '@angular/cdk/overlay';
+import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
-import { OverlayService, OverlayAction, OverlayEvent } from '../../services/overlay.service';
+import { Directive, Input, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
+import { OverlayAction, OverlayEvent, OverlayService } from '../../services/overlay.service';
 
 
 @Directive({
