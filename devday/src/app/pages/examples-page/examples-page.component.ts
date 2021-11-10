@@ -131,7 +131,4 @@ export class ExamplesPageComponent implements OnInit {
     }
   }
 
-  onRate($event:{oldValue:number, newValue:number}) {
-    console.log($event)
-  }
 }

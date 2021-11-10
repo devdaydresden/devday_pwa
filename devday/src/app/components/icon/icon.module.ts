@@ -11,7 +11,7 @@ import { AppRoutingModule } from 'src/app/routing/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AngularSvgIconModule,
+    AngularSvgIconModule.forRoot(),
     AppRoutingModule
   ],
   exports: [
