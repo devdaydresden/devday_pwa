@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 import { ComponentsModule } from './modules/components.module';
 import { ExamplesPageComponent } from './pages/examples-page/examples-page.component';
 import { AppRoutingModule } from './routing/app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { LoginComponent } from './pages/login/login/login.component';
@@ -17,6 +17,9 @@ import { FavouritesComponent } from './pages/favourites/favourites/favourites.co
 import { YourTicketComponent } from './pages/your-ticket/your-ticket/your-ticket.component';
 import { SpeakersComponent } from './pages/speakers/speakers/speakers.component';
 import { SpeakerComponent } from './pages/speaker/speaker/speaker.component';
+import { LoginService } from './services/login.service';
+import { ApiInterceptor } from './interceptors/api.interceptor';
+import { AccessTokenInterceptor } from './interceptors/access-token.interceptor';
 
 
 @NgModule({
@@ -43,7 +46,11 @@ import { SpeakerComponent } from './pages/speaker/speaker/speaker.component';
   exports: [
       ComponentsModule
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: AccessTokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

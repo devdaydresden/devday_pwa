@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+      "target": "https://www.devday.de/api/",
+      "secure": false,
+      "logLevel": "debug"
+  }
+}

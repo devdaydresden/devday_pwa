@@ -3,9 +3,9 @@
 <tabs [data]="loginTabs.data" [activeIndex]="loginTabs.activeIndex" (activeIndexChange)="tabChanged($event)"></tabs>
 
 <ng-container *ngIf="loginTabs.activeIndex === 0">
-  <app-input label="E-Mail" icon="ic_mail" placeholder="E-Mail"></app-input>
-  <app-input label="Password" type="password" icon="ic_password" placeholder="Password"></app-input>
-  <button app-button textBtn centered>Login</button>
+  <app-input label="E-Mail" icon="ic_mail" [value]="loginData.username" (change)="loginData.username = $event.value" placeholder="E-Mail"></app-input>
+  <app-input label="Password" type="password" [value]="loginData.password" (change)="loginData.password = $event.value" icon="ic_password" placeholder="Password"></app-input>
+  <button app-button textBtn centered (click)="performLogin()">Login</button>
 </ng-container>
 
 <ng-container *ngIf="loginTabs.activeIndex === 1">

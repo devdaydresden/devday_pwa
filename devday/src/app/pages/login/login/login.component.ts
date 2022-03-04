@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { Card } from 'src/app/classes/card';
+import { LoginData, LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -34,13 +36,27 @@ export class LoginComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  public loginData : LoginData = {
+    username: null,
+    password: null,
+  }
+
+  constructor(private loginService: LoginService, private cookieService: CookieService) { }
 
   ngOnInit(): void {
   }
 
   public tabChanged(tabIndex: number) {
     this.loginTabs.activeIndex = tabIndex;
+  }
+
+  public performLogin() {
+    this.loginService.login(this.loginData).subscribe(
+      (data : {token: string}) => {
+        console.log(data)
+        this.cookieService.set('sessionToken', data.token, { expires: 2, sameSite: 'Strict' });
+      }
+    )
   }
 
 }
